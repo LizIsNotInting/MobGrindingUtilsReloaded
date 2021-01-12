@@ -1,6 +1,6 @@
-package example.examplemod.block
+package io.github.lizisnotinting.mobgrindingutils.block
 
-import example.examplemod.ExampleMod
+import io.github.lizisnotinting.mobgrindingutils.MobGrindingUtilsMod
 import net.minecraft.block.AbstractBlock
 import net.minecraft.block.Block
 import net.minecraft.block.material.Material
@@ -9,7 +9,7 @@ import thedarkcolour.kotlinforforge.forge.KDeferredRegister
 
 object ModBlocks {
     // use of the new KDeferredRegister
-    val REGISTRY = KDeferredRegister(ForgeRegistries.BLOCKS, ExampleMod.ID)
+    val REGISTRY = KDeferredRegister(ForgeRegistries.BLOCKS, MobGrindingUtilsMod.ID)
 
     // the returned ObjectHolderDelegate can be used as a property delegate
     // this is automatically registered by the deferred registry at the correct times

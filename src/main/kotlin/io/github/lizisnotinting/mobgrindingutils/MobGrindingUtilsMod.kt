@@ -1,6 +1,6 @@
-package example.examplemod
+package io.github.lizisnotinting.mobgrindingutils
 
-import example.examplemod.block.ModBlocks
+import io.github.lizisnotinting.mobgrindingutils.block.ModBlocks
 import net.minecraftforge.fml.common.Mod
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent
 import net.minecraftforge.fml.event.server.FMLServerAboutToStartEvent
@@ -17,10 +17,10 @@ import thedarkcolour.kotlinforforge.forge.MOD_BUS
  *
  * An example for blocks is in the `blocks` package of this mod.
  */
-@Mod(ExampleMod.ID)
-object ExampleMod {
+@Mod(MobGrindingUtilsMod.ID)
+object MobGrindingUtilsMod {
     // the modid of our mod
-    const val ID: String = "examplemod"
+    const val ID: String = "mob_grinding_utils_reloaded"
 
     // the logger for our mod
     val LOGGER: Logger = LogManager.getLogger()
@@ -32,8 +32,8 @@ object ExampleMod {
         ModBlocks.REGISTRY.register(MOD_BUS)
 
         // usage of the KotlinEventBus
-        MOD_BUS.addListener(::onClientSetup)
-        FORGE_BUS.addListener(::onServerAboutToStart)
+        MOD_BUS.addListener(MobGrindingUtilsMod::onClientSetup)
+        FORGE_BUS.addListener(MobGrindingUtilsMod::onServerAboutToStart)
     }
 
     /**
